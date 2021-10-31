@@ -1,0 +1,121 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #000000;
+    width: 100%;
+    height: 100%;
+}
+
+section{ 
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+section::before
+{
+    content: '';    
+    position: absolute;
+    /* top: 45%; */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%);
+
+}
+
+section::after
+{
+    content: '';    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(30% at 10% 10%);
+
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.container .card .content{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5;
+}
+.container .card:hover .content {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.container .card .content .imgBx{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+
+}
+.container .card .content .imgBx img
+{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.container .card .content .contentBx h2 
+{
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+
+}
+.container .card .content .contentBx a
+{
+    font-size: 12px;
+    color: rgb(122, 246, 255);
+    font-weight: 300px;
+    text-transform: initial;
+    text-decoration: none;
+}
+
+
